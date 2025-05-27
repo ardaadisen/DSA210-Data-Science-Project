@@ -46,4 +46,31 @@ In Phase 2, the dataset was extended from yearly totals to monthly ridership val
 ### 🧪 Example Result:
 Using a two-sample t-test, we found that the average monthly ridership of the M2 line did **not** change significantly from 2019 to 2024 (p = 0.6696).
 
-Other lines, such as M7 or T5, showed more variation and were also tested.
+Other lines, such as M7 or T5, showed more variation and were also tested. 
+
+## Phase 3 – Machine Learning
+
+✅ Key Additions:  
+- Enriched the metro data with population data
+- Application of two machine learning models  
+- Forecasting future ridership  
+- Clustering lines by usage patterns
+
+### 1. Linear Regression Forecasting  
+- Predicted monthly passengers using `Year`, `Month`, and `Population` as input features  
+- Applied to lines like M2 for years including 2025, 2026, 2027, and 2028  
+- Visualized actual vs predicted and forecasted passengers
+
+### 2. K-Means Clustering  
+- Clustered lines based on **average monthly passengers per capita**  
+- Revealed usage intensity patterns:  
+  - Cluster 2 = High usage lines (e.g. M2, M1, T1)  
+  - Cluster 0 = Moderate usage lines  
+  - Cluster 1 = Low usage or new/specialized lines (e.g. T5, TF2, F4)
+
+📁 Files Updated:  
+- notebooks/metro_analysis.ipynb – Linear regression, forecasting, clustering
+- data/istanbul_metro_enriched_with_population.csv - Added new enriched data   
+- README.md – Documented all 3 phases  
+- requirements.txt – Updated with ML dependencies
+
